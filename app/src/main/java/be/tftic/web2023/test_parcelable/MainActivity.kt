@@ -3,6 +3,7 @@ package be.tftic.web2023.test_parcelable
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import be.tftic.web2023.test_parcelable.SecondActivity.Companion.EXTRA_EXAMPLE_DATA
 import be.tftic.web2023.test_parcelable.databinding.ActivityMainBinding
 import be.tftic.web2023.test_parcelable.models.ExampleData
 
@@ -28,10 +29,11 @@ class MainActivity : AppCompatActivity() {
             binding.etMainNumber.text.toString().toInt()
         )
 
-        // TODO Création d'un bundle avec les données "ExampleData"
-
         // Intent de navigation
-        val navIntent = Intent(this, SecondActivity::class.java)
+        val navIntent = Intent(this, SecondActivity::class.java).apply {
+            // Ajout des données dans l'extra de l'intent
+            putExtra(EXTRA_EXAMPLE_DATA, data)
+        }
         startActivity(navIntent)
     }
 }
