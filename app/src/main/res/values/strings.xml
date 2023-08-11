@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">test_parcelable</string>
+    <string name="title_screen">Demo Parcelable</string>
+    <string name="label_firstname">Prénom</string>
+    <string name="label_name">Nom</string>
+    <string name="label_number">Nombre</string>
+    <string name="btn_switch_screen">Changer d\'écran...</string>
+    <string name="second_info">Second Activity</string>
+    <string name="main_info">Main Activity</string>
+</resources>
